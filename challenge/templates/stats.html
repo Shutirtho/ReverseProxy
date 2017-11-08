@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reverse Proxy</title>
+</head>
+<header>
+	<h1><a href="/listroutes">RETURN TO ROUTE LIST</a></h1>
+    <h2>STATS</h2>
+</header>
+<body>
+  <p><b>Slow Requests</b><p>	
+  {% for stat in stats %}
+      <p>{{ stat['slow_requests']}} </p>
+  {% endfor %}
+       <p><b>Queries</b><p>
+   {% for stat in stats %}    	
+       <p>{{ stat['queries'] }} </p>
+    {% endfor %}   
+</body>
+</html>

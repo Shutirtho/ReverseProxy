@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reverse Proxy</title>
+</head>
+<header>
+    <h1>Route List for SF-MUNI&nbsp;&nbsp;<a href="/stats">Go to Stats</a></h1>
+</header>
+<body>
+  {% for route, tag in route_list.iteritems() %}
+      <!-- <p>{{ route_element }} </p> -->
+      <p><a href="/listroutes/{{tag}}">{{route}}</a></p>
+  {% endfor %}
+</body>
+</html>

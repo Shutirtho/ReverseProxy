@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reverse Proxy</title>
+</head>
+<header>
+    <h1><a href="/listroutes">RETURN TO ROUTE LIST</a></h1>
+    <h3>Stops for this Route are : </h3>
+</header>
+<body>	
+  {% for stop in stop_list %}
+      <p>{{ stop }} </p>
+  {% endfor %}
+</body>
+</html>
