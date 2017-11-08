@@ -16,7 +16,7 @@ docker container ls <br />
 docker container stop [container id](for image = techallenge)<br />
 docker container rm [container id](for image = techallenge) <br />
 docker image ls <br />
-docker image rmi [imgae ids] [imge id1 image id2] (for image = techallenge and image=python) <br />
+docker image rmi [image ids] [imge id1 image id2] (for image = techallenge and image=python) <br />
 
 Tools Used:
 Flask Webframework
