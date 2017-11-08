@@ -1,4 +1,4 @@
-# ReverseProxy
+# ReverseProxyServer App
 
 This application was built and packaged using Mac OS X El Captain version 10.11.6 and Docker for Mac.
 
