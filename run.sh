@@ -1,10 +1,9 @@
 echo "Building Image for the Reverse Proxy Server......"
 echo  "................................................"
-docker build -t techallenge ./ReverseProxy/challenge/
-echo "Running Reverse Proxy Server mapping your machine’s port 9999 to the container’s published port 9999......"
+docker build -t techallenge ./ReverseProxy/challenge/>/dev/null
+echo "Starting Reverse Proxy Server and mapping your machine’s port 9999 to the container’s published port 9999......"
 echo  "................................................"
-echo "Container ID : "
-docker run -d -p 9999:9999 techallenge
+docker run -d -p 9999:9999 techallenge>/dev/null
 echo "Running tests.sh"
 echo  "................................................"
 ./ReverseProxy/tests.sh 
