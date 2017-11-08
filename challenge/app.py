@@ -1,5 +1,5 @@
 #!flask/bin/python
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect
 import requests
 import time
 from xml.etree import ElementTree as ET
@@ -19,7 +19,7 @@ STATS = [
 
 @app.route('/')
 def index():
-    r return redirect("http://localhost:9999/stats", code=302)
+    return redirect("http://localhost:9999/stats", code=302)
 
 
 @app.route('/stats')
