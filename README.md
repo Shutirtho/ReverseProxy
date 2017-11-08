@@ -21,6 +21,6 @@ Tools Used: <br />
 Flask web framework <br />
 Docker for Mac https://docs.docker.com/docker-for-mac/ <br /> <br />
 
-Nexbus's Documentation referred: <br />
+Nextbus's Documentation referred: <br />
 http://www.nextbus.com/xmlFeedDocs/NextBusXMLFeed.pdf
 
