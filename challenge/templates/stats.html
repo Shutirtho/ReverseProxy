@@ -9,7 +9,7 @@
     <h2>STATS</h2>
 </header>
 <body>
-  <p><b>Slow Requests</b><p>	
+  <p><b>Slow Requests - taking greater than 0.02s</b><p>	
   {% for stat in stats %}
       <p>{{ stat['slow_requests']}} </p>
   {% endfor %}
