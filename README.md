@@ -18,10 +18,10 @@ docker container rm [container id](for image = techallenge) <br />
 docker image ls <br />
 docker image rmi [image ids] [imge id1 image id2] (for image = techallenge and image=python) <br />
 
-Tools Used:
-Flask Webframework
-Docker for Mac https://docs.docker.com/docker-for-mac/
+Tools Used: <br />
+Flask Webframework <br />
+Docker for Mac https://docs.docker.com/docker-for-mac/ <br /> <br />
 
-Nexbus's Documentation referred:
+Nexbus's Documentation referred: <br />
 http://www.nextbus.com/xmlFeedDocs/NextBusXMLFeed.pdf
 
