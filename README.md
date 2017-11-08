@@ -4,7 +4,7 @@ This application was built and packaged using Mac OS X El Captain version 10.11.
 This app assumes that you have Docker running in your system.
 
 To run this reverse proxy server application: <br />
-Execute this from the parent folder of ReverseProxy folder --> <br />./ReverseProxy/run.sh<br /> <br />
+Execute this in the terminal from the parent folder of ReverseProxy folder --> <br />./ReverseProxy/run.sh<br /> <br />
 
 The server application can be accessed at http://localhost:9999 <br /> <br />
 
