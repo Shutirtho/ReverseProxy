@@ -8,7 +8,7 @@ Execute this in the terminal from the parent folder of ReverseProxy folder --> <
 
 The server application can be accessed at http://localhost:9999 <br /> <br />
 
-For getting logs of the container runninga the application the following commands : <br />
+For getting logs of the container running the application use the following commands : <br />
 docker container ls <br />
 docker logs [container id](for image = techallenge) <br /> <br />
 
