@@ -1,4 +1,3 @@
-#!flask/bin/python
 from flask import Flask, render_template, redirect
 import requests
 import time
