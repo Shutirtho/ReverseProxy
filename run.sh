@@ -7,4 +7,4 @@ docker run -d -p 9999:9999 techallenge>/dev/null
 echo "Running tests.sh"
 echo  "................................................"
 ./ReverseProxy/tests.sh 
-echo "==================Server is running at http://localhost:9999  ==================================="
+echo "==================Server is running at http://localhost:9999/stats  ==================================="

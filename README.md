@@ -6,7 +6,7 @@ This app assumes that you have Docker running in your system.
 To run this reverse proxy server application: <br />
 Execute this in the terminal from the parent folder of ReverseProxy folder --> <br />./ReverseProxy/run.sh<br /> <br />
 
-The server application can be accessed at http://localhost:9999 <br /> <br />
+The server application can be accessed at http://localhost:9999/stats <br /> <br />
 
 For getting logs of the container running the application use the following commands : <br />
 docker container ls <br />
