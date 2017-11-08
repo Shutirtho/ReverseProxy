@@ -36,8 +36,8 @@ def listRoutes(tag=None): # use nextbus's "routeConfig" command to get list of s
         roundtrip = time.time() - start # get response time for endpoint /listroutes/<string:tag>'
         
 
-        if roundtrip > 0.02:
-            STATS[0]["slow_requests"][0]["/listroutes/<string:tag>"] = roundtrip # update with response time greater than 0.02s
+        if roundtrip > 0.02 and STATS[0]["slow_requests"][0]["/listroutes/<string:tag>"] < roundtrip:
+            STATS[0]["slow_requests"][0]["/listroutes/<string:tag>"] = roundtrip # update with slowest response time greater than 0.02s
 
         STATS[1]["queries"][0]["/listroutes/<string:tag>"] += 1 
         stop_list = []
@@ -51,8 +51,8 @@ def listRoutes(tag=None): # use nextbus's "routeConfig" command to get list of s
         root = ET.fromstring(requests.get("http://webservices.nextbus.com/service/publicXMLFeed?command=routeList&a=sf-muni").content)
         roundtrip = time.time() - start # get response time for endpoint /listroutes
 
-        if roundtrip > 0.02:
-            STATS[0]["slow_requests"][1]["/listroutes"] = roundtrip # update with response time greater than 0.02s
+        if roundtrip > 0.02 and STATS[0]["slow_requests"][1]["/listroutes"] < roundtrip:
+            STATS[0]["slow_requests"][1]["/listroutes"] = roundtrip # update with slowest response time greater than 0.02s
 
         STATS[1]["queries"][1]["/listroutes"] += 1
 
