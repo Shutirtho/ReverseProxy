@@ -7,7 +7,7 @@ from xml.etree import ElementTree as ET
 
 app = Flask(__name__)
 
-
+#used to store data for slowest request to an endpoint and number of queries to an endpoint 
 STATS = [ 
           
           {"slow_requests": [ {"/listroutes/<string:tag>" : 0 } , {"/listroutes" : 0 }  ] },
@@ -30,15 +30,15 @@ def stats():
 
 @app.route('/listroutes/<string:tag>') 
 @app.route('/listroutes')
-def listRoutes(tag=None):
+def listRoutes(tag=None): # use nextbus's "routeConfig" command to get list of stops for a route
     if tag is not None:
         start = time.time()
         root = ET.fromstring(requests.get("http://webservices.nextbus.com/service/publicXMLFeed?command=routeConfig&a=sf-muni&r="+tag).content)
-        roundtrip = time.time() - start
-        print roundtrip
+        roundtrip = time.time() - start # get response time for endpoint /listroutes/<string:tag>'
+        
 
         if STATS[0]["slow_requests"][0]["/listroutes/<string:tag>"] < roundtrip:
-            STATS[0]["slow_requests"][0]["/listroutes/<string:tag>"] = roundtrip 
+            STATS[0]["slow_requests"][0]["/listroutes/<string:tag>"] = roundtrip # update with slowest response time
 
         STATS[1]["queries"][0]["/listroutes/<string:tag>"] += 1 
         stop_list = []
@@ -47,14 +47,13 @@ def listRoutes(tag=None):
                 stop_list.append(stop.get('title'))
             return render_template('stops.html', stop_list=stop_list)    
 
-    else:
+    else: # use nextbus's "routeList" command to get list of routes for sf-muni
         start = time.time()
         root = ET.fromstring(requests.get("http://webservices.nextbus.com/service/publicXMLFeed?command=routeList&a=sf-muni").content)
-        roundtrip = time.time() - start
-        print roundtrip
+        roundtrip = time.time() - start # get response time for endpoint /listroutes
 
         if STATS[0]["slow_requests"][1]["/listroutes"] < roundtrip:
-            STATS[0]["slow_requests"][1]["/listroutes"] = roundtrip
+            STATS[0]["slow_requests"][1]["/listroutes"] = roundtrip # update with slowest response time
 
         STATS[1]["queries"][1]["/listroutes"] += 1
 
