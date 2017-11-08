@@ -1,7 +1,6 @@
 # ReverseProxyServer App
 
-This application was built and packaged using Mac OS X El Captain version 10.11.6 and Docker for Mac.
-
+This application was built and packaged using Mac OS X El Captain version 10.11.6 and Docker for Mac - Docker version 17.09.0-ce, build afdb6d4.<br />
 This app assumes that you have Docker running in your system.
 
 To run this reverse proxy server application: <br />
