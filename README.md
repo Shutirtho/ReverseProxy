@@ -8,6 +8,11 @@ Execute this in the terminal from the parent folder of ReverseProxy folder --> <
 
 The server application can be accessed at http://localhost:9999 <br /> <br />
 
+For getting logs of the container runninga the application the following commands : <br />
+docker container ls <br />
+docker logs [container id](for image = techallenge) <br /> <br />
+
+
 If you are running the application server on a virtual machine using Docker Toolbox, connect to the server at the IP of your docker machine. You can find this IP with the following command : docker-machine ip.<br /> <br />
 
 Cleanup after executing the server application : <br />
@@ -15,7 +20,7 @@ docker container ls <br />
 docker container stop [container id](for image = techallenge)<br />
 docker container rm [container id](for image = techallenge) <br />
 docker image ls <br />
-docker image rmi [image ids] [imge id1 image id2] (for image = techallenge and image=python) <br />
+docker image rmi [image ids] [imge id1 image id2] (for image = techallenge and image = python) <br />
 
 Tools Used: <br />
 Flask web framework <br />
