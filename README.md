@@ -11,7 +11,7 @@ The server application can be accessed at http://localhost:9999
 
 If you are running the application server on a virtual machine using Docker Toolbox, connect to the server at the IP of your docker machine. You can find this IP with the following command : docker-machine ip.
 
-Cleanup after executing the server application : 
+Cleanup after executing the server application : <br />
 docker container ls <br />
 docker container stop [container id](for image = techallenge)<br />
 docker container rm [container id](for image = techallenge) <br />
